@@ -12,7 +12,7 @@ This repository contains my entire codebase and notes from my Data Structures an
 	•	Reverse Array: Reversing an array using the Two-Pointer Approach.
 	•	Intersection of Two Arrays: Implementing a function to find common elements between two arrays.
 
-📝 Completed Homework Problems
+📝 Completed Homework
 	•	Problem 1: Write a function to sum and product all the numbers of array.
 	•	Problem 2: Write a function to swap max and min values of array.
 	•	Problem 3: Write a function to print all unique values of array.
