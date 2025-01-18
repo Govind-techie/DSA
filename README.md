@@ -16,12 +16,18 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Basics of Vectors**: Understanding vector declaration, initialization, and dynamic resizing.  
 - **Vector Functions**: Exploring common vector functions like `push_back()`, `pop_back()`, `size()`, `at()`, etc., and their usage.  
 - **For-Each Loop**: Using the range-based `for` each loop to iterate over vectors and access their elements directly.
+- **Static Memory Allocation**: Memory is allocated at compile-time for fixed-size arrays.
+- **Dynamic Memory Allocation**: Memory is allocated at runtime for structures like vectors, with dynamic resizing.
 
 ## 📝 Completed Homework Problems
 - **Problem 1**: Write a function to sum and product all the numbers of an array.  
 - **Problem 2**: Write a function to swap max and min values of an array.  
 - **Problem 3**: Write a function to print all unique values of an array.  
-- **Problem 4**: Write a function to print intersection (common values) of 2 arrays.  
+- **Problem 4**: Write a function to print intersection (common values) of 2 arrays.
+
+## 🎯 LeetCode Problem
+- **Problem 136: Single Number** (Difficulty: Easy)  
+   Solution for finding the single number in an array where every element appears twice except for one. 
 
 
 
