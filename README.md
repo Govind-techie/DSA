@@ -19,15 +19,23 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Static Memory Allocation**: Memory is allocated at compile-time for fixed-size arrays.
 - **Dynamic Memory Allocation**: Memory is allocated at runtime for structures like vectors, with dynamic resizing.
 
+### **Kadane's Algorithm**
+- **Kadane's Algorithm**:  
+  Kadane's algorithm is an efficient method to find the maximum sum of a contiguous subarray in an array of numbers. It operates in **O(n)** time, making it significantly faster than the brute-force approach. 
+
+
 ## 📝 Completed Homework Problems
 - **Problem 1**: Write a function to sum and product all the numbers of an array.  
 - **Problem 2**: Write a function to swap max and min values of an array.  
 - **Problem 3**: Write a function to print all unique values of an array.  
 - **Problem 4**: Write a function to print intersection (common values) of 2 arrays.
 
-## 🎯 LeetCode Problem
+## 🎯 LeetCode Problems
 - **Problem 136: Single Number** (Difficulty: Easy)  
-   Solution for finding the single number in an array where every element appears twice except for one. 
+   Solution for finding the single number in an array where every element appears twice except for one.
+
+- **Problem 53: Maximum Subarray Sum** (Difficulty: Medium)  
+   Solution for finding the maximum sum of a contiguous subarray using the brute-force approach.
 
 
 
