@@ -23,6 +23,9 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Kadane's Algorithm**:  
   Kadane's algorithm is an efficient method to find the maximum sum of a contiguous subarray in an array of numbers. It operates in **O(n)** time, making it significantly faster than the brute-force approach. 
 
+### **Moore's Voting Algorithm**
+- **Moore's Voting Algorithm**:  
+  This algorithm helps find the majority element (the element that appears more than **n / 2** times) in an array. It maintains a candidate and a counter. If the counter reaches zero, a new candidate is chosen. The algorithm runs in **O(n)** time with constant space.
 
 ## 📝 Completed Homework Problems
 - **Problem 1**: Write a function to sum and product all the numbers of an array.  
@@ -36,6 +39,12 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 
 - **Problem 53: Maximum Subarray Sum** (Difficulty: Medium)  
    Solution for finding the maximum sum of a contiguous subarray using the brute-force approach.
+
+- **Problem 1: Two Sum** (Difficulty: Easy)  
+   Solution for finding two numbers in an array that add up to a specific target value.
+
+- **Problem 169: Majority Element** (Difficulty: Easy)  
+   Solution for finding the majority element in an array that appears more than **n / 2** times.
 
 
 
