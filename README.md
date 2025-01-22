@@ -27,11 +27,11 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Moore's Voting Algorithm**:  
   This algorithm helps find the majority element (the element that appears more than **n / 2** times) in an array. It maintains a candidate and a counter. If the counter reaches zero, a new candidate is chosen. The algorithm runs in **O(n)** time with constant space.
 
-## 📝 Completed Homework Problems
-- **Problem 1**: Write a function to sum and product all the numbers of an array.  
-- **Problem 2**: Write a function to swap max and min values of an array.  
-- **Problem 3**: Write a function to print all unique values of an array.  
-- **Problem 4**: Write a function to print intersection (common values) of 2 arrays.
+## ⏳ Time and Space Complexity
+- **Time Complexity**: I have learned that time complexity measures how the execution time of an algorithm increases with respect to the input size. It helps to evaluate the efficiency of algorithms, especially for large inputs.  
+- **Space Complexity**: Space complexity evaluates the amount of memory required by an algorithm as the input size grows. It helps to understand the memory efficiency of an algorithm.  
+- **Big O Notation**: I have also learned about Big O notation, which is used to describe the worst-case scenario for time or space complexity, providing a way to compare algorithms based on how they scale with increasing input size.
+
 
 ## 🎯 LeetCode Problems
 - **Problem 136: Single Number** (Difficulty: Easy)  

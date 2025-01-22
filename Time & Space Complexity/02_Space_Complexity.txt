@@ -1,0 +1,104 @@
+Space Complexity:  Space complexity is a measure of the amount of memory an algorithm uses as a function of the input size, describing its efficiency in terms of space usage.
+
+Note: It measures additional space required by the algorithm, not the input itself.
+Note: As the input size of a function increases, the space complexity of it may also increase depending on the algorithm's design.
+
+Auxiliary Space: Auxiliary space is the extra memory used by an algorithm during execution, excluding the memory for input data.
+It accounts for memory used by:
+	1. Temporary variables.
+	2. Additional data structures (e.g., arrays, stacks).
+	3. Recursive calls (memory used in the call stack).
+
+Notes:
+	• Auxiliary space measures how much extra memory an algorithm needs beyond the input size.
+	• It is used to evaluate the memory efficiency of an algorithm.
+
+Examples of Auxiliary Space:
+
+1. Temporary variables (O(1)):
+int a = 5, b = 10;
+int temp = a; // Temporary variable for swapping; uses constant auxiliary space.
+
+2. Additional data structures (e.g., arrays):
+int arr[n];     // Input array of size n.
+int copyArr[n]; // New array of size n requires O(n) auxiliary space.
+
+3. Recursive calls:
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);  // Recursive calls use O(n) auxiliary space for the call stack.
+}
+
+Key Points:
+	• Auxiliary space excludes input size; it focuses only on extra memory used.
+	• Helps assess the memory efficiency of an algorithm.
+
+Example Space Complexity: O(n)
+
+O(n) means the memory used by the algorithm increases linearly with the size of the input (n). If the input size doubles, the space used roughly doubles too.
+
+Example:
+
+Creating an auxiliary array of size n:
+
+int arr[n]; (The algorithm requires additional memory proportional to the input size n.)
+
+Graph of O(n)
+
+The graph of O(n) is a straight line starting from the origin (0, 0), with memory usage growing linearly as input size (n) increases.
+
+Space (Memory Usage)
+  ^
+  |
+10|                                        *
+  |                                     *
+  |                                  *
+  |                               *
+  |                            *
+  |                         *
+  |                      *
+  |                   *
+  |                *
+  |             *
+  |          *
+  |       *
+  |    *
+  | *
+  +---------------------------------------------------> Input Size (n) (As input size increases, memory usage increases in a linear fashion)
+      1    2    3    4    5    6    7    8    9   10
+
+Key Points:
+	•	X-axis: Input size (n)
+	•	Y-axis: Space (or memory usage)
+	•	Slope: Represents the linear growth of space as n increases.
+
+O(1) (Constant Time/Space):
+O(1) represents constant time or space, meaning the algorithm’s performance or memory usage does not depend on the input size (n).
+
+Why "1" in O(1)?
+The "1" in O(1) signifies that the algorithm's resource usage remains constant, regardless of input size. It represents the fixed, unchanging growth rate. 
+It does NOT mean there is only one operation or unit of memory, but rather that the performance is independent of n.
+
+Key Characteristics:
+	• For time complexity: The number of operations remains fixed regardless of input size.
+	• For space complexity: The extra memory used does not change with input size.
+
+Examples of O(1) Time:
+Accessing an array element by index:
+int value = arr[5]; (Same time for any array size.)
+
+Checking if a number is even:
+bool isEven(int n) {
+    return n % 2 == 0; (Single operation, constant time.)
+}
+
+Examples of O(1) Space:
+Swapping two variables:
+int a = 10, b = 20;
+int temp = a;
+a = b;
+b = temp; (Requires constant memory, independent of input size.)
+
+Key Points:
+	• O(1) is the most efficient in terms of growth.
+	• It represents operations or memory that do not scale with input size.
