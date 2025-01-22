@@ -1,0 +1,24 @@
+Big O Notation : Big O Notation is a way to describe how the time or space needed for an algorithm grows as the input size increases.
+It focuses on the worst-case scenario to measure an algorithm’s efficiency.
+
+Key Points:
+
+	1.	What is "O" in Big O?
+	•	"O" stands for "Order of Growth."
+	•	It describes how an algorithm's runtime or space usage scales with input size.
+	•	Focuses on the dominant factor affecting performance.
+
+	2.	Why Use Big O?
+	•	To compare the efficiency of algorithms, especially for large inputs.
+	•	It ignores constants and smaller terms, focusing only on the growth rate.
+
+	3.	Common Notations:
+	•	O(1): Constant time (fastest, doesn’t depend on input size).
+	•	O(log n): Logarithmic time (grows slowly).
+	•	O(n): Linear time (grows proportionally with input).
+	•	O(n^2): Quadratic time (slows down quickly with large input).
+
+	4.	Example:
+	•	If you iterate through an array of size n, the time complexity is O(n) because the number of steps increases linearly with the array size.
+
+Note : Big O helps you understand how an algorithm scales with input size and choose the most efficient solution.
