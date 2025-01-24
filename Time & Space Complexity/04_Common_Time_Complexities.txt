@@ -1,0 +1,37 @@
+Common Time Complexities : 
+
+1. Constant Time - O(1) (Best Time Complexity)
+	•	The algorithm’s runtime does not depend on the input size.
+	•	Example: Accessing an element in an array by its index.
+
+2. Logarithmic Time - O(log n)
+	•	The runtime grows logarithmically as the input size increases.
+	•	Example: Binary search.
+
+3. Linear Time - O(n)
+	•	The runtime grows linearly with the input size.
+	•	Example: Traversing an array or linked list.
+
+4. Linearithmic Time - O(n log n)
+	•	The runtime grows proportionally to  n  multiplied by log n .
+	•	Example: Efficient sorting algorithms like Merge Sort, Quick Sort (average case).
+
+5. Quadratic Time - O(n²)
+	•	The runtime grows quadratically with the input size.
+	•	Example: Nested loops iterating through a 2D array or Bubble Sort.
+
+6. Cubic Time - O(n³)
+	•	The runtime grows cubically with the input size.
+	•	Example: Algorithms with three nested loops, such as matrix multiplication.
+
+7. Exponential Time - O(2ⁿ)
+	•	The runtime doubles with each additional input element.
+	•	Example: Recursive solutions to the Traveling Salesman Problem, solving subsets in dynamic programming.
+
+8. Factorial Time - O(n!) (Worst Time Complexity)
+	•	The runtime grows factorially as the input size increases.
+	•	Example: Generating all permutations of  n  elements.
+
+Note : As the size of the input increases, the time complexity of an algorithm get worse, resulting in longer execution times.
+
+Note : In Time complexity the constant operations performing while execution is always considered as 1.

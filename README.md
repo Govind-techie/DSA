@@ -28,7 +28,16 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
   This algorithm helps find the majority element (the element that appears more than **n / 2** times) in an array. It maintains a candidate and a counter. If the counter reaches zero, a new candidate is chosen. The algorithm runs in **O(n)** time with constant space.
 
 ## ⏳ Time and Space Complexity
-- **Time Complexity**: I have learned that time complexity measures how the execution time of an algorithm increases with respect to the input size. It helps to evaluate the efficiency of algorithms, especially for large inputs.  
+- **Time Complexity**: I have learned that time complexity measures how the execution time of an algorithm increases with respect to the input size. It helps to evaluate the efficiency of algorithms, especially for large inputs. Some of the time complexities I have studied include:
+  - **O(1)**: Constant time complexity – the operation takes the same amount of time regardless of input size.
+  - **O(log n)**: Logarithmic time complexity – the operation grows logarithmically with the input size (often seen in algorithms that divide the input, like binary search).
+  - **O(n)**: Linear time complexity – the operation grows linearly with the input size.
+  - **O(n log n)**: Log-linear time complexity – the operation grows logarithmically with respect to input size and linearly with a part of the input size (seen in efficient sorting algorithms like Merge Sort and Quick Sort).
+  - **O(n^2)**: Quadratic time complexity – the operation grows quadratically as the input size increases (often caused by nested loops).
+  - **O(n^3)**: Cubic time complexity – the operation grows cubically with the input size (typically due to three nested loops).
+  - **O(2^n)**: Exponential time complexity – the operation grows exponentially with the input size (common in recursive algorithms like Fibonacci).
+  - **O(n!)**: Factorial time complexity – the operation grows very fast as the input size increases (common in brute-force algorithms).
+
 - **Space Complexity**: Space complexity evaluates the amount of memory required by an algorithm as the input size grows. It helps to understand the memory efficiency of an algorithm.  
 - **Big O Notation**: I have also learned about Big O notation, which is used to describe the worst-case scenario for time or space complexity, providing a way to compare algorithms based on how they scale with increasing input size.
 
