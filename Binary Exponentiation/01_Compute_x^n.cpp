@@ -47,3 +47,34 @@
 // 2^{10} = (32)^2 = 1024
 
 
+#include <iostream>
+using namespace std;
+
+double binaryExponentiation(double x, int n) {
+    double result = 1;
+    
+    // Handle negative exponent case
+    if (n < 0) {
+        x = 1 / x;
+        n = -n;  // Convert negative exponent to positive
+    }
+    
+    while (n > 0) {
+        if (n % 2 == 1) {
+            result *= x;  // Multiply if exponent is odd
+        }
+        x *= x;  // Square the base
+        n /= 2;  // Halve the exponent
+    }
+
+    return result;
+}
+
+int main() {
+    double x = 2.0;
+    int n = 10;
+
+    cout << "2^10 = " << binaryExponentiation(x, n) << endl;  // Output: 1024.0
+    return 0;
+}
+
