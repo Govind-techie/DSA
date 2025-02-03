@@ -27,6 +27,7 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Moore's Voting Algorithm**:  
   This algorithm helps find the majority element (the element that appears more than **n / 2** times) in an array. It maintains a candidate and a counter. If the counter reaches zero, a new candidate is chosen. The algorithm runs in **O(n)** time with constant space.
 
+
 ## ⏳ Time and Space Complexity
 - **Time Complexity**: I have learned that time complexity measures how the execution time of an algorithm increases with respect to the input size. It helps to evaluate the efficiency of algorithms, especially for large inputs. Some of the time complexities I have studied include:
   - **O(1)**: Constant time complexity – the operation takes the same amount of time regardless of input size.
@@ -41,20 +42,6 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Space Complexity**: Space complexity evaluates the amount of memory required by an algorithm as the input size grows. It helps to understand the memory efficiency of an algorithm.  
 - **Big O Notation**: I have also learned about Big O notation, which is used to describe the worst-case scenario for time or space complexity, providing a way to compare algorithms based on how they scale with increasing input size.
 
-
-## 🎯 LeetCode Problems
-- **Problem 136: Single Number** (Difficulty: Easy)  
-   Solution for finding the single number in an array where every element appears twice except for one.
-
-- **Problem 53: Maximum Subarray Sum** (Difficulty: Medium)  
-   Solution for finding the maximum sum of a contiguous subarray using the brute-force approach.
-
-- **Problem 1: Two Sum** (Difficulty: Easy)  
-   Solution for finding two numbers in an array that add up to a specific target value.
-
-- **Problem 169: Majority Element** (Difficulty: Easy)  
-   Solution for finding the majority element in an array that appears more than **n / 2** times.
-
-
-
-
+### **Binary Exponentiation**
+- **Binary Exponentiation**:  
+  Binary Exponentiation is a method used to efficiently calculate **x^n** (x raised to the power n) in **O(log n)** time. It works by breaking down the power calculation into smaller, more manageable steps by exploiting the properties of exponents. This approach uses the concept of exponentiation by squaring, allowing us to reduce the number of multiplications. This technique is particularly useful for large values of `n` in problems such as computing powers in modular arithmetic and optimizing algorithms like the Pow(x, n) problem.
