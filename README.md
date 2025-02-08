@@ -45,3 +45,13 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 ### **Binary Exponentiation**
 - **Binary Exponentiation**:  
   Binary Exponentiation is a method used to efficiently calculate **x^n** (x raised to the power n) in **O(log n)** time. It works by breaking down the power calculation into smaller, more manageable steps by exploiting the properties of exponents. This approach uses the concept of exponentiation by squaring, allowing us to reduce the number of multiplications. This technique is particularly useful for large values of `n` in problems such as computing powers in modular arithmetic and optimizing algorithms like the Pow(x, n) problem.
+
+### **Pointers**
+- **Basics of Pointers**: Understanding memory addresses, dereferencing, and pointer declaration.  
+- **Pointer Arithmetic**: Performing operations like increment, decrement, addition, and subtraction on pointers.  
+- **Pass-by-Reference**: Using pointers to modify values inside functions without returning them.  
+- **Constant Pointers**: Understanding restrictions on modifying stored addresses or pointed values.  
+- **Pointer to Pointer**: Storing the address of a pointer and accessing multi-level references.  
+- **Dynamic Memory Allocation**: Allocating and deallocating memory at runtime using `new` and `delete`.  
+- **Pointer and Arrays**: Understanding how arrays are internally pointers and using pointer arithmetic for traversal.  
+- **Undefined Behavior**: Accessing memory outside valid bounds can lead to garbage values or segmentation faults.  
