@@ -55,3 +55,16 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Dynamic Memory Allocation**: Allocating and deallocating memory at runtime using `new` and `delete`.  
 - **Pointer and Arrays**: Understanding how arrays are internally pointers and using pointer arithmetic for traversal.  
 - **Undefined Behavior**: Accessing memory outside valid bounds can lead to garbage values or segmentation faults.  
+
+### **Binary Search Algorithm**
+Binary Search is an **efficient searching algorithm** used to find an element in a **sorted array**. Instead of checking elements one by one like **linear search (O(n))**, Binary Search repeatedly **divides the search space in half**, reducing the number of comparisons. This makes it highly efficient with a **time complexity of O(log n)**.
+
+#### **1️⃣ Iterative Approach**
+- The **iterative method** of Binary Search uses a loop to repeatedly divide the array in half until the target element is found.  
+- It has a **space complexity of O(1)** since no additional memory is used.  
+- It is often preferred in practical implementations due to its efficiency and lack of recursive overhead.
+
+#### **2️⃣ Recursive Approach**
+- The **recursive method** of Binary Search works by calling itself on the left or right half of the array until the element is found or the search space becomes empty.  
+- It has a **space complexity of O(log n)** due to the recursive function calls stored in the call stack.  
+- While it is conceptually simpler, it may be **less efficient** than the iterative approach due to function call overhead.  
