@@ -83,7 +83,7 @@ int main() {
     }
     cout << endl;
 
-    // Erasing the element at index 2 (30 will be removed)
+    // Erasing the element at index 2 (3 will be removed)
     vec1.erase(vec1.begin() + 2);
 
     cout << "After erasing element at index 2: ";
@@ -92,16 +92,16 @@ int main() {
     }
     cout << endl;
 
-    // Erasing a range of elements (removing 20 and 40)
-    vec1.erase(vec1.begin(), vec1.begin() + 2); // The erase function removes elements within a given range by iterating through the vector and deleting them within a given range.
+    // Erasing a range of elements (removing 1 and 2)
+    vec1.erase(vec1.begin(), vec1.begin() + 2); // The erase function removes elements from the specified range [start, end), where `start` is included and `end` is excluded.
     cout << "After erasing first two elements: ";
     for (int val : vec1) {
         cout << val << " ";
     }
     cout << endl;
 
-    // Note : The erase function in C++ takes an iterator as its parameter
-    // Note : Erase Function changes the size of vector but does not affect it capacity which remains same.
+    // Note : The erase function in C++ takes an iterator as its parameter.
+    // Note : The erase function changes the size of the vector but does not affect its capacity, which remains the same.
 
 
     // Insert Function :
@@ -130,10 +130,10 @@ int main() {
     }
     cout << endl;
 
-    // Inserting elements from another vector
+    // Inserting elements from another vector at the end of vec2
     vec2.insert(vec2.end(), vec1.begin(), vec1.end());
 
-    cout << "After inserting element {4,5} at the end from other vector : ";
+    cout << "After inserting elements at the end from another vector: ";
     for (int val : vec2) {
         cout << val << " ";
     }
@@ -141,13 +141,13 @@ int main() {
 
     // Clear : 
 
-    vec1.clear(); // Delete all the element stored in a vector. (It affect the size of vector but not its capacity)
+    vec1.clear(); // Delete all the elements stored in a vector. (It affects the size of the vector but not its capacity)
 
-    cout << "Size of vec1 : " << vec1.size() << endl; // Returns 0 as all element stored in vec1 is cleared or deleted using clear function.
+    cout << "Size of vec1 : " << vec1.size() << endl; // Returns 0 as all elements stored in vec1 are cleared or deleted using the clear function.
 
     // Empty : 
 
-    cout << "Is vec1 is empty : " << vec1.empty() << endl; // Returns a boolean value either true (1) or false (0).
+    cout << "Is vec1 empty : " << vec1.empty() << endl; // Returns a boolean value either true (1) or false (0).
 
     /*
     Iterators: Iterators are like pointers that help move through elements in a container (like vectors or lists). You can use them to access
@@ -167,32 +167,25 @@ int main() {
 
     // Forward Loop using iterators
     for (itr1 = vec4.begin() ; itr1 != vec4.end() ; itr1++){
-        cout << *(itr1) << " "; // The iterator (itr) does not directly store a value. Instead, it points to the memory location of an element, so we need to dereference it (*itr) to access the actual value.
+        cout << *(itr1) << " "; 
     }
     cout << endl;
 
     // Reverse Iterators : 
 
-    cout << "vec.rbegin() : " << *(vec4.rbegin()) << endl; // Dereferencing the reverse iterator pointing to the last element of the vector. 
-    cout << "vec.rend() : "  << *(vec4.rend()) << endl; // vec.rend() points one position before the first element, so dereferencing it leads to undefined behavior.
-
-    // Initialization of reverse iterators :
+    cout << "vec.rbegin() : " << *(vec4.rbegin()) << endl; 
+    cout << "vec.rend() : "  << *(vec4.rend()) << endl;
 
     vector<int>::reverse_iterator itr2;
 
-    // Backward Loop using reverse iterators
-    for (itr2 = vec4.rbegin() ; itr2 != vec4.rend() ; itr2++){ // Note : Reverse iterators work backward internally, so itr2++ moves to the previous element, while itr2-- would move forward, which is incorrect.
+    for (itr2 = vec4.rbegin() ; itr2 != vec4.rend() ; itr2++){
         cout << *(itr2) << " ";
     } cout << endl;
 
-
-    // Auto Keyword :  The auto keyword simplifies iterator declarations by automatically deducing the correct type, making code cleaner and more readable.
-
     vector<int> vec5 = {1, 2, 3, 4, 5};
 
-    // Using auto with an iterator
     for (auto itr = vec5.begin(); itr != vec5.end(); ++itr) { 
-        cout << *itr << " "; // Dereferencing iterator to access value
+        cout << *itr << " "; 
     }
     return 0;
 }
