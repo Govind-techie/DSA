@@ -1,4 +1,4 @@
-// Loops on Arrays: Loops are used to access and process each element of an array and perform operations over it efficiently.
+// Loops on Arrays: Loops are used to access and process each element of an array efficiently.
 
 #include<iostream>
 using namespace std;
@@ -7,84 +7,87 @@ int main(){
 
     int marks[5]= {99,100,86,78,95};
 
-    int size = sizeof(marks)/sizeof(int); // It stores the size of an array
+    int size = sizeof(marks)/sizeof(int); // Calculates the total number of elements in the array.
 
-    // We can use loop to print each element of an array.
+    // Using a loop to print each element of the array.
 
     for (int i = 0 ; i < size ; i++){
-        cout<<marks[i]<<endl; // Here, we use i as index as the value of i increase after ecah iteration which will act as index of each element within that array.
+        cout<<marks[i]<<endl; // 'i' is used as an index to access elements one by one during each iteration.
     }
 
-    // we can use loops on array to take input for data which has to be stored in it.
+    // We can also use loops to input data into an array.
 
-    // Eg : We have to store price of 5 items and take its average.
+    // Example: Take input for the prices of 5 items and find their average.
 
     int price[5];
     int size_2 = sizeof(price)/sizeof(int);
     int total = 0;
 
     for (int i = 0 ; i < size_2 ; i++){
-        cout<<"Enter price of items "<<i+1<<" : "; // Here, we take the item price as input in each iteration. 
-        cin>>price[i]; // Store it in price array with index position as i.
+        cout<<"Enter price of items "<<i+1<<" : "; // Asking user to input item prices one by one.
+        cin>>price[i]; // Storing the input value in the array at index 'i'.
     }
 
     for (int i = 0 ; i < size_2 ; i++){
-        total += price[i]; // Here, we fetching data from price array and adding it in total varaible.
+        total += price[i]; // Adding each element of the array to the 'total' variable.
     } 
 
-    int average = total/size_2; // Here, we store the average price by dividing (total/size of price array)
+    int average = total/size_2; // Calculating average by dividing the total by the number of items.
 
-    cout<<"The average price of 5 items is : "<<average<<endl; // We, print the average price of 5 items.
+    cout<<"The average price of 5 items is : "<<average<<endl; // Displaying the calculated average.
 
-    // Problem : Find the smallest and largest value from an array.
+    // Problem: Find the smallest and largest values from an array.
 
     int numbers[5];
     int size_3 = sizeof(numbers)/sizeof(int);
-    int smallest = INT_MAX; // It initialize the value of smallest varaible with a random large number.
+    int smallest = INT_MAX; // Initializing with the maximum possible integer value.
     int smallest_1 = INT_MAX; 
     int smallest_2 = INT_MAX;
-    int largest = INT_MIN; // It initialize the value of largest varaible with a random small number (large negative value).
+    int largest = INT_MIN; // Initializing with the minimum possible integer value.
     int largest_1 = INT_MIN; 
     int largest_2 = INT_MIN; 
-    // Loop for storing data in array :
+
+    // Loop to input elements into the array:
 
     for (int i = 0 ; i < size_3 ; i++){
         cout<<"Enter number "<<i+1<<" : ";
         cin>>numbers[i];
     }
 
-    // Loops for comparison :
+    // Loop to find the smallest number:
 
     for (int i = 0 ; i < size_3 ; i++){
-        if (numbers[i] < smallest){ // Here, we compare the numbers of array with the smallest value which we intiailzed with a random large number
-            smallest = numbers[i]; // If the condition satisfies it changes the value within the smallest varaible and assign number of that array at particular index to it.
+        if (numbers[i] < smallest){ // If current number is smaller than the current smallest.
+            smallest = numbers[i]; // Update smallest with the current number.
         } 
     }
 
-    cout<<"The smallest no. is : "<<smallest<<endl; // After the compeletion of loop it prints the smallest number. 
+    cout<<"The smallest no. is : "<<smallest<<endl; // Display the smallest number.
+
+    // Loop to find the largest number:
 
     for (int i = 0 ; i < size_3 ; i++){
-        if (numbers[i] > largest){ // Here, we compare the numbers in array with the largest value which we intiailzed with a random small number (large negative value).
-            largest = numbers[i]; // If the condition satisfies it changes the value within the largest varaible and assign number of that array at particular index to it.
+        if (numbers[i] > largest){ // If current number is larger than the current largest.
+            largest = numbers[i]; // Update largest with the current number.
         } 
     }
 
-    cout<<"The largest no. is : "<<largest<<endl; // After the compeletion of loop it prints the largest number. 
+    cout<<"The largest no. is : "<<largest<<endl; // Display the largest number.
 
-    // We can solve this same problem using min and max function on array :
+    // We can also solve the same problem using the built-in min and max functions:
 
     for (int i = 0 ; i < size_3 ; i++){
-        smallest_1 = min(numbers[i],smallest_1); // min compares two value and give minimum value out of it.
+        smallest_1 = min(numbers[i],smallest_1); // Updates smallest_1 with the smaller of two values.
     }
 
     for (int i = 0 ; i < size_3 ; i++){
-        largest_1 = max(numbers[i],largest_1); // max compares two value and give maximum value out of it.
+        largest_1 = max(numbers[i],largest_1); // Updates largest_1 with the larger of two values.
     }
 
     cout<<"The smallest no. is : "<<smallest_1<<endl; 
     cout<<"The largest no. is : "<<largest_1<<endl; 
 
-    // Problem : we have to print the index of smallest and largest num in array :
+    // Problem: Print the index of the smallest and largest numbers in the array.
 
     int indexForSmallest = 0;
     int indexForLargest = 0;
@@ -92,8 +95,8 @@ int main(){
     for (int i = 0 ; i < size_3 ; i++){
         if (numbers[i] < smallest_2){
             smallest_2 = numbers[i]; 
-            indexForSmallest = i;
-    }
+            indexForSmallest = i; // Store the index where the smallest number is found.
+        }
     }
 
     cout<<"The smallest no. index is : "<<indexForSmallest<<endl; 
@@ -101,12 +104,10 @@ int main(){
     for (int i = 0 ; i < size_3 ; i++){
         if (numbers[i] > largest_2){
             largest_2 = numbers[i]; 
-            indexForLargest = i;            
+            indexForLargest = i; // Store the index where the largest number is found.
         } 
     }
 
     cout<<"The largest no. index is : "<<indexForLargest<<endl; 
-
-    
 
 }

@@ -1,45 +1,50 @@
-// An array is a collection of elements, typically of the same data type, stored in contiguous memory locations. It allows multiple values
-// to be stored under a single variable name, with each value accessible using an index.
+// An array is a collection of elements, typically of the same data type, stored in contiguous memory locations.
+// It allows multiple values to be stored under a single variable name, with each value accessible using an index.
 
-// Properties of Arrays :
+// Properties of Arrays:
 
-// 1. Store same type of data in it.
-// 2. Contigous in memory (entire data stored together in a single memory location)
-// 3 Linear data structure
+// 1. Store elements of the same data type.
+// 2. Contiguous memory allocation (all elements stored together in a continuous memory block).
+// 3. Linear data structure (elements arranged in a sequence).
 
-// To create an Array : We have to mention the size of array and its datatype.
-// eg : int marks[5]; This 5 represent the size or sub divisions in an array.
+// How to Create an Array: You must mention the size and data type of the array.
+// Example: int marks[5];  // '5' represents the size (number of elements) in the array.
 
-// To initialize an array with values : We mention the data we have to store in an array inside {}.
-// eg : int marks[5] = {99,100,86,78,95};
+// How to Initialize an Array with Values: Place the values inside curly braces {}.
+// Example: int marks[5] = {99, 100, 86, 78, 95};
 
-// Note: An array can store fewer elements than its defined size, but it cannot store more elements than its size.
+// Note: An array can store fewer elements than its defined size, but cannot store more than its size.
 
-// Note: If the size of an array is not defined, it will automatically be set to the number of elements stored in it. 
+// Note: If the size is not mentioned, it will automatically be set based on the number of values provided.
+// Example: int price[] = {20, 45, 60};  // Size is automatically set to 3.
 
-// To access data within an array : We use indexing in which indexing in array start from 0 index to (size-1) index.
+// Accessing Array Elements: Use the index (starts from 0 to size-1).
+// Example: marks[3] accesses the fourth element.
 
-// Note : We can also use index to change data in an array at particular index.
+// Modifying Array Elements: You can assign a new value using its index.
+// Example: marks[2] = 98;
 
-// Note : we can access data within array respect to its size and index value we if we try to fetch data out of array's size it will give an error.
+// Caution: Accessing an index outside the array's size will lead to undefined behavior (may cause an error or garbage value).
 
 #include<iostream>
 using namespace std;
 
-int main(){
+int main() {
 
-    int marks[5]= {99,100,86,78,95};
-    
-    int price[] = {20,45,60}; // Here, the size of array is automatically stored as 3 because of the elements in it.
+    int marks[5] = {99, 100, 86, 78, 95};
 
-    cout<<marks[3]<<endl; // Here, we are accessing the data in marks array using index of that particular element in an array.
+    int price[] = {20, 45, 60};  // Array size is auto-detected as 3
 
-    cout<<marks[2]<<endl; // Here, we print the data stored in marks array at index 2.
-    marks[2] = 98; // Now, we changed the data of index 2 in marks array.
-    cout<<marks[2]<<endl; // Here, it will print the new data assigned at index 2 of marks array
+    cout << marks[3] << endl;  // Access and print the element at index 3 (fourth element)
 
-    cout<<sizeof(price)/sizeof(int)<<endl; // Here, we can check the size of an array which returns in form of bytes. If we want the size we
-    // have to divide it by size of its respective datatype.
+    cout << marks[2] << endl;  // Print original value at index 2
+
+    marks[2] = 98;             // Change the value at index 2
+
+    cout << marks[2] << endl;  // Print updated value at index 2
+
+    // To find the size (number of elements) in the array:
+    cout << sizeof(price) / sizeof(int) << endl;
 
     return 0;
 }

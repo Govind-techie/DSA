@@ -1,42 +1,44 @@
-// Pass by reference : Pass by reference means that when you pass an argument to a function, the function receives a reference 
-// (or memory address) to the actual data rather than a copy of it. This allows the function to modify the original data directly.
+// Pass by reference: It means when we pass an argument to a function, the function receives a reference 
+// (or memory address) of the actual data, not a copy. This allows the function to modify the original data directly.
 
-// Note : Address is a memory location where data is stored and when we pass array as arguement to function it pass the orginal address of array that is initialized in main function.
+// Note: An address is the memory location where data is stored. When we pass an array as an argument to a function, 
+// we pass the original address of the array created in the main function.
 
-// Note: When an array is passed to a function as an argument, its original address is passed, allowing changes made within the function to affect the main array. Therefore, we must be cautious when modifying the array.
+// Note: Since arrays are passed by reference, any changes made inside the function will directly affect the original array. 
+// So, we must be careful while modifying arrays inside functions.
 
 #include<iostream>
 using namespace std;
 
-void changeArray(int arr[]){ // Here, we pass the address of orginal array arguement. 
-    arr[2] = 4; // Here, any changes or operations performed on the array within the function will directly affect the original array, as the function operates on its actual memory address.
+void changeArray(int arr[]){ // Receives the address of the original array.
+    arr[2] = 4; // Modifies the value at index 2 in the original array using the passed address.
 }
 
 void sqaureArray(int arr_2[], int size){
-    for (int i = 0 ; i < size ; i++){ // Here, we execute a loop over an array.
-        arr_2[i] = arr_2[i]*arr_2[i]; // Here, we take each element from array and make its quare and store it at that same index
+    for (int i = 0 ; i < size ; i++){ // Loop through each element of the array.
+        arr_2[i] = arr_2[i]*arr_2[i]; // Square the element and store it back in the same index.
         cout<<arr_2[i]<<" ";
     } 
     cout<<endl;  
 }
 
 int main(){
-    int arr[] = {1,2,3}; // Its an array with 3 int values.
-    int size = sizeof(arr)/sizeof(int); // Gives, the size of array
+    int arr[] = {1,2,3}; // Declares an array with 3 integers.
+    int size = sizeof(arr)/sizeof(int); // Calculates the number of elements in the array.
 
-    cout<<arr[2]<<endl; // Output : 3 (Before calling the changeArray fucntion)
+    cout<<arr[2]<<endl; // Output before function call: 3
 
-    changeArray(arr); // Here, we call the changeArray function with arguement (arr) which changes the orginal data of array at particular index.
+    changeArray(arr); // Calls the function that changes the value at index 2 in the original array.
     
-    cout<<arr[2]<<endl; // Output : 4 (After calling the changeArray fucntion)
+    cout<<arr[2]<<endl; // Output after function call: 4
 
-    // Problem : Create a function which returns the square of value present in array.
+    // Problem: Create a function to square each element in an array.
 
     int arr_2[] = {2,3,4};
-    sqaureArray(arr_2,size);
+    sqaureArray(arr_2,size); // Squares each element and prints the result inside the function.
 
     for (int i = 0 ; i < size ; i++){
-        // It shows that the changes within the function modify the orginal array too.
+        // This shows that changes made inside the function have modified the original array.
         cout<<arr_2[i]<<" ";
     }
     cout<<endl;

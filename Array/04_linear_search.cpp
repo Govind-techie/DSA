@@ -8,11 +8,11 @@ using namespace std;
 
 // Problem : create a function that find whether a given value is present in array or not. If present return its index and if not return -1 as index.
 
-int linearSearch(int arr[], int size, int n) {
-    // Loop through the array to search for the target value 'n'.
+int linearSearch(int arr[], int size, int target) {
+    // Loop through the array to search for the target value.
     for (int i = 0; i < size; i++) {
         // If the current element matches the target value, return its index.
-        if (arr[i] == n) {
+        if (arr[i] == target) {
             return i;
         }
     }

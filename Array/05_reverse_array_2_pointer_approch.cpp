@@ -64,25 +64,33 @@ int main(){
     cout << endl;
 
     return 0;
-
-//  While Condition Explaination (<=):
-
-//     Even-Sized Array Example
-
-// For an array of size 6, like [1, 2, 3, 4, 5, 6]:
-// 	•	Initial pointers: startIdx = 0, endIdx = 5
-// 	•	We swap elements at both pointers, move the pointers towards the center, and repeat until startIdx > endIdx.
-
-// Odd-Sized Array Example
-
-// For an array of size 5, like [1, 2, 3, 4, 5]:
-// 	•	Initial pointers: startIdx = 0, endIdx = 4
-// 	•	We swap elements, and when startIdx == endIdx, the middle element stays in place.
-
-// Why <=?
-// 	•	Even-sized arrays: The loop stops when startIdx > endIdx.
-// 	•	Odd-sized arrays: The loop stops when startIdx == endIdx, leaving the middle element as it is.
-
-// This ensures the array is reversed correctly for both even and odd sizes.
-
 }
+
+ /*
+    
+    While Condition Explaination (<=):
+    
+    Even-Sized Array Example
+    
+    For an array of size 6, like [1, 2, 3, 4, 5, 6]:
+        •	Initial pointers: startIdx = 0, endIdx = 5
+        •	We swap elements at both pointers, move the pointers towards the center, and repeat until startIdx > endIdx.
+    
+    Odd-Sized Array Example
+    
+    For an array of size 5, like [1, 2, 3, 4, 5]:
+        •	Initial pointers: startIdx = 0, endIdx = 4
+        •	We swap elements, and when startIdx == endIdx, the middle element stays in place.
+    
+    Why <=?
+        •	Even-sized arrays: The loop stops when startIdx > endIdx.
+        •	Odd-sized arrays: The loop stops when startIdx == endIdx, leaving the middle element as it is.
+    
+    This ensures the array is reversed correctly for both even and odd sizes.
+    
+*/
+
+   
+    
+
+
