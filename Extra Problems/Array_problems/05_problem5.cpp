@@ -10,6 +10,21 @@ Time Complexity (Brute Force Approach): O(n^3)
 #include <iostream>
 using namespace std;
 
+// Function to print all subarrays
+void printSubarray(int arr[], int n) {
+    // Generate and print all subarrays
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            cout << "["; // Start subarray
+            for (int k = i; k <= j; k++) {
+                cout << arr[k];
+                if (k < j) cout << ","; // Add comma between elements
+            }
+            cout << "]" << endl; // End subarray
+        }
+    }
+}
+
 int main() {
     int n;
     cout << "Enter size of array: ";
@@ -23,20 +38,11 @@ int main() {
         cin >> arr[i];
     }
 
-    // Generate and print all subarrays
-    for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            cout << "["; // Start subarray
-            for (int k = i; k <= j; k++) {
-                cout << arr[k];
-                if (k < j) cout << ","; // Add comma between elements
-            }
-            cout << "]" << endl; // End subarray
-        }
-    }
+    // Call function to print subarrays
+    printSubarray(arr, n);
 
     /*
-    Output:
+    Output for input array [1, 2, 3, 4, 5]:
     [1]
     [1,2]
     [1,2,3]
@@ -53,6 +59,6 @@ int main() {
     [4,5]
     [5]
     */
-   
+
     return 0;
 }
