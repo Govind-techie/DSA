@@ -13,19 +13,24 @@ using namespace std;
 // Bubble Sort function
 void bubbleSort(vector<int>& arr) {
     int n = arr.size();
-    for (int i = 0 ; i < n - 1 ; i++) {
-        bool isSwap = false;
-        for (int j = 0 ; j < n - i - 1 ; j++) {
-            if (arr[j] > arr[j+1]) {
-                swap(arr[j], arr[j+1]);
-                isSwap = true;
+    bool swapped;
+
+    // Outer loop for each pass
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false; // Flag to check if any swapping occurred
+
+        // Inner loop for comparing adjacent elements
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]); // Swap if elements are in wrong order 
+                swapped = true; // Set flag to true if a swap occurred
             }
         }
 
-        if (!isSwap){ // / If no swap occurred, array is sorted, so exit early
-            return;
+        // If no two elements were swapped in the inner loop, the array is already sorted
+        if (!swapped) {
+            break;
         }
-
     }
 }
 
@@ -40,10 +45,8 @@ void printArray(const vector<int>& arr) {
 int main() {
     vector<int> arr = {4, 1, 5, 2, 3};
 
-    // Calling the Bubble Sort function
-    bubbleSort(arr);
 
-    // Printing the sorted array
+    bubbleSort(arr);
     printArray(arr);
 
     return 0;

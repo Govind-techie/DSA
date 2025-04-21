@@ -20,7 +20,7 @@ void insertionSort(vector<int>& arr) {
 
         // Move elements of the sorted portion that are greater than 'curr' to one position ahead
         while (prev >= 0 && arr[prev] > curr) {
-            arr[prev + 1] = arr[prev];  // Shift elements to the right
+            swap(arr[prev], arr[prev+1]); // Shift elements to the right
             prev--;                      // Move to the previous element
         }
         
