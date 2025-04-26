@@ -12,12 +12,26 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Reverse Array**: Reversing an array using the Two-Pointer Approach.
 - **Intersection of Two Arrays**: Implementing a function to find common elements between two arrays.
 
+### **2D Arrays**
+- **Basics of 2D Arrays**: Understanding declaration, initialization, and accessing elements using row and column indices.
+- **Row-wise and Column-wise Traversal**: Iterating through 2D arrays by rows and columns.
+- **Linear Search in 2D Arrays**: Searching for an element by traversing a 2D matrix.
+- **Important Problems**: Solving problems like Spiral Matrix Traversal, Matrix Transposition, and Searching in a Sorted Matrix.
+
 ### **Vectors**
 - **Basics of Vectors**: Understanding vector declaration, initialization, and dynamic resizing.
 - **Vector Functions**: Exploring common vector functions like `push_back()`, `pop_back()`, `size()`, `at()`, etc., and their usage.
 - **For-Each Loop**: Using the range-based `for` each loop to iterate over vectors and access their elements directly.
 - **Static Memory Allocation**: Memory is allocated at compile-time for fixed-size arrays.
 - **Dynamic Memory Allocation**: Memory is allocated at runtime for structures like vectors, with dynamic resizing.
+
+### **Strings and Character Arrays**
+- **Basics of Strings**: Understanding C++ `string` class, declaration, and initialization.
+- **Important String Functions**: Using functions like `length()`, `find()`, `substr()`, `append()`, `erase()`, etc.
+- **Character Arrays**: Working with traditional character arrays (`char arr[]`) and manual operations like input, output, and string termination with `\0`.
+- **String Problems Solved**:
+  - **Valid Palindrome**
+  - **Valid Anagram**
 
 ### **Kadane's Algorithm**
 - **Kadane's Algorithm**:  
