@@ -56,6 +56,18 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Dynamic Memory Allocation**: Using `new` and `delete`.
 - **Pointer and Arrays**: Understanding arrays as pointers and using pointer arithmetic.
 
+### **Bit Manipulation**
+- **Introduction to Bits**: Understanding binary representation and bit-level operations.
+- **Bitwise Operators**: Using `AND (&)`, `OR (|)`, `XOR (^)`, `NOT (~)`, `Left Shift (<<)`, and `Right Shift (>>)` operators.
+- **Common Bit Tricks**: Checking even/odd, swapping numbers, counting set bits, turning bits on/off.
+- **Applications**: Solving problems like finding the unique number, checking power of two, and more.
+
+### **Object-Oriented Programming (OOP)**
+- **Basic Concepts**: Understanding classes, objects, encapsulation, inheritance, polymorphism, and abstraction.
+- **Constructors and Destructors**: Lifecycle of an object and memory management.
+- **Types of Inheritance**: Single, Multilevel, Multiple, Hierarchical, and Hybrid inheritance with examples.
+- **Real-World Examples**: Applying OOP concepts to practical C++ programs and system design.
+
 ### **Binary Search Algorithm**
 - **Iterative Approach**: Uses a loop to repeatedly divide the array in half.
 - **Recursive Approach**: Uses function calls to divide the array recursively.
