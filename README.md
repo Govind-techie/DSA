@@ -56,11 +56,23 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Dynamic Memory Allocation**: Using `new` and `delete`.
 - **Pointer and Arrays**: Understanding arrays as pointers and using pointer arithmetic.
 
+
 ### **Bit Manipulation**
 - **Introduction to Bits**: Understanding binary representation and bit-level operations.
 - **Bitwise Operators**: Using `AND (&)`, `OR (|)`, `XOR (^)`, `NOT (~)`, `Left Shift (<<)`, and `Right Shift (>>)` operators.
 - **Common Bit Tricks**: Checking even/odd, swapping numbers, counting set bits, turning bits on/off.
 - **Applications**: Solving problems like finding the unique number, checking power of two, and more.
+
+### **Recursion**
+- **What is Recursion?**: A function that calls itself to solve smaller subproblems of a larger problem. Useful for tasks that can be broken down into similar subtasks.
+- **Base Case and Recursive Case**: Every recursive function must have a base case to stop the recursion and a recursive case that breaks the problem down.
+- **Types of Recursion**:
+  - **Tail Recursion**: The recursive call is the last operation in the function.
+  - **Head Recursion**: The recursive call is made before any other processing.
+  - **Tree Recursion**: A function makes multiple recursive calls.
+  - **Indirect Recursion**: A function calls another function which eventually calls the original function.
+- **Call Stack Behavior**: Each recursive call is pushed to the stack and popped when it completes. Understanding the call stack is key to avoiding stack overflow.
+- **Use Cases**: Recursion is ideal for problems like factorial, Fibonacci numbers, tree traversals, and divide-and-conquer algorithms like merge sort.
 
 ### **Object-Oriented Programming (OOP)**
 - **Basic Concepts**: Understanding classes, objects, encapsulation, inheritance, polymorphism, and abstraction.
