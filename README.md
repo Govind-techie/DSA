@@ -56,7 +56,6 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Dynamic Memory Allocation**: Using `new` and `delete`.
 - **Pointer and Arrays**: Understanding arrays as pointers and using pointer arithmetic.
 
-
 ### **Bit Manipulation**
 - **Introduction to Bits**: Understanding binary representation and bit-level operations.
 - **Bitwise Operators**: Using `AND (&)`, `OR (|)`, `XOR (^)`, `NOT (~)`, `Left Shift (<<)`, and `Right Shift (>>)` operators.
@@ -84,6 +83,11 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Iterative Approach**: Uses a loop to repeatedly divide the array in half.
 - **Recursive Approach**: Uses function calls to divide the array recursively.
 - **Time Complexity**: **O(log n)** in a sorted array.
+
+### **Divide and Conquer**
+- **Merge Sort**: A divide-and-conquer sorting algorithm that splits the array into halves, recursively sorts them, and merges the results. Time complexity: **O(n log n)**.
+- **Quick Sort**: Picks a pivot, partitions the array, and recursively sorts the partitions. Average case: **O(n log n)**, Worst case: **O(n²)**.
+- **Rotated Sorted Array Search**: Modified binary search to find an element in a rotated sorted array. Time complexity: **O(log n)**.
 
 ## **Standard Template Library (STL) 🚀**
 The **Standard Template Library (STL)** provides a collection of built-in **data structures** and **algorithms** in C++. It simplifies coding by offering optimized implementations of commonly used functionalities.
