@@ -45,3 +45,5 @@ int main() {
     
     return 0;
 }
+
+// Note: In backtracking, the work is done after the recursive call.
