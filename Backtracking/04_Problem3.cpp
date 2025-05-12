@@ -114,7 +114,7 @@ void NQueens(int rows, vector<vector<char>> &board){
     The board is a 2D grid of size n x n, filled with '.' representing empty cells.
 */
 int main(){
-    int n = 10; // Change n for different board sizes (like 8 for 8-Queens)
+    int n = 4; // Change n for different board sizes (like 8 for 8-Queens)
 
     // Step 1: Create an n x n board filled with '.'
     vector<vector<char>> board(n, vector<char>(n, '.'));
