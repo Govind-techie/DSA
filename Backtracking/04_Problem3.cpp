@@ -85,28 +85,30 @@ bool isSafe(const vector<vector<char>>& board, int row, int col){
     rows -> current row we are trying to place a queen in.
     board -> current state of the board with queens placed so far.
 */
-void NQueens(int rows, vector<vector<char>> &board){
+int NQueens(int rows, vector<vector<char>> &board){
     int n = board.size();
 
     // Base case: all queens are placed successfully
     if (rows == n){
         printBoard(board); // Print the valid board configuration
-        return;
+        return 1; // Return 1 to indicate one valid solution is found
     }
 
     // Try placing a queen in every column of the current row
+    int count = 0; // Initialize count to store the number of valid solutions
     for (int j = 0 ; j < n ; j++){
         if(isSafe(board,rows,j)){
             // Place the queen at (rows, j)
             board[rows][j] = 'Q';
 
-            // Recur for the next row
-            NQueens(rows+1,board);
+            // Recur for the next row and accumulate the count of valid solutions
+            count += NQueens(rows+1,board);
 
             // Backtrack: remove the queen from (rows, j)
             board[rows][j] = '.';
         }
     }
+    return count; // Return the total count of valid solutions for this branch
 }
 
 /*
@@ -120,7 +122,9 @@ int main(){
     vector<vector<char>> board(n, vector<char>(n, '.'));
 
     // Step 2: Start placing queens from the first row
-    NQueens(0,board);
+    int count = NQueens(0,board); // Count the total number of valid solutions
+
+    cout << "count: " << count << endl; // Print the number of solutions found
 
     return 0;
 }
