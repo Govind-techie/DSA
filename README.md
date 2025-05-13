@@ -96,3 +96,13 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
 - **Vector**: A **dynamic array** that can grow or shrink automatically.
 - **List**: A **doubly linked list** allowing efficient insertion and deletion.
 - **Deque (Double-Ended Queue)**: Allows insertion and deletion from both the **front** and **back** in constant time.
+
+### **Linked Lists**
+- **Basics of Linked List**: Understanding nodes, pointers, and how linked lists differ from arrays in memory allocation.
+- **Class Implementation of Singly Linked List**: Defining a `Node` class and managing the list through insertion, traversal, and deletion.
+- **Insert at End**: Adding new elements at the end of the list using pointer manipulation.
+- **Print the List**: Traversing the list and printing all node values sequentially.
+- **Search in Linked List**: Recursively or iteratively checking if a value exists in the list.
+- **Reverse Linked List**: Reversing the entire list by updating the `next` pointers using an iterative method.
+- **Remove Nth Node from End**: Removing the nth node from the end using two-pointer (fast and slow) technique.
+- **Check Palindrome**: Checking if the linked list is a palindrome by reversing the second half and comparing both halves.
