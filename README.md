@@ -89,7 +89,7 @@ Welcome to my **Data Structures and Algorithms (DSA)** learning journey! This re
 - **Quick Sort**: Picks a pivot, partitions the array, and recursively sorts the partitions. Average case: **O(n log n)**, Worst case: **O(n²)**.
 - **Rotated Sorted Array Search**: Modified binary search to find an element in a rotated sorted array. Time complexity: **O(log n)**.
 
-## **Standard Template Library (STL) 🚀**
+### **Standard Template Library (STL) 🚀**
 The **Standard Template Library (STL)** provides a collection of built-in **data structures** and **algorithms** in C++. It simplifies coding by offering optimized implementations of commonly used functionalities.
 
 - **Pair**: A container that holds two values of possibly different types.
@@ -106,3 +106,20 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
 - **Reverse Linked List**: Reversing the entire list by updating the `next` pointers using an iterative method.
 - **Remove Nth Node from End**: Removing the nth node from the end using two-pointer (fast and slow) technique.
 - **Check Palindrome**: Checking if the linked list is a palindrome by reversing the second half and comparing both halves.
+
+### **Stacks**
+- **Introduction to Stack**: A **Last In First Out (LIFO)** data structure where the last element added is the first to be removed.
+- **Stack Operations**:
+  - `push()`: Add an element to the top.
+  - `pop()`: Remove the top element.
+  - `top()` / `peek()`: View the top element without removing it.
+  - `isEmpty()`: Check if the stack is empty.
+- **Implementation**:
+  - **Using Arrays**: Implementing a static stack using fixed-size arrays.
+  - **Using Vectors**: Dynamic stack implementation using C++ vectors.
+  - **Using STL Stack**: Utilizing the built-in `stack` container from STL for efficient and concise code.
+- **Applications**:
+  - **Valid Parentheses**: Checking for balanced brackets.
+  - **Reverse a String**: Reversing characters using stack.
+  - **Next Greater Element**: Finding the next greater element to the right using a monotonic stack.
+  - **Call Stack Simulation**: Mimicking function call behavior using stack.
