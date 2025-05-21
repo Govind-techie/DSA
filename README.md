@@ -123,3 +123,19 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
   - **Reverse a String**: Reversing characters using stack.
   - **Next Greater Element**: Finding the next greater element to the right using a monotonic stack.
   - **Call Stack Simulation**: Mimicking function call behavior using stack.
+
+### **Queues**
+- **Introduction to Queue**: A **First In First Out (FIFO)** data structure where the first element added is the first to be removed.
+- **Queue Operations**:
+  - `enqueue()`: Add an element at the rear.
+  - `dequeue()`: Remove the element from the front.
+  - `front()`: Access the front element.
+  - `isEmpty()`: Check if the queue is empty.
+- **Implementation**:
+  - **Using Arrays**: Fixed-size array implementation with circular indexing.
+  - **Using STL Queue**: Utilizing the built-in `queue` container from the STL.
+  - **Using Deque**: Implementing queue using `deque` for double-ended flexibility.
+- **Applications**:
+  - **Level Order Traversal**: Traversing trees level by level.
+  - **Task Scheduling**: Managing processes in operating systems.
+  - **Sliding Window Problems**: Solving problems using queue or deque for efficient window management.
