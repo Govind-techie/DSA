@@ -29,19 +29,20 @@ Output:
 false
 */
 
-#include<iostream>
-#include<stack>
+#include <iostream>
+#include <stack>
 using namespace std;
 
-// Implementing a Queue using two Stacks (s1 and s2)
+// Template Queue using two stacks (Push => O(n))
+template <typename T>
 class Queue {
-    stack<int> s1; // Main stack where front of queue is always on top
-    stack<int> s2; // Helper stack used during push operation
+    stack<T> s1; // Main stack where front of queue is always on top
+    stack<T> s2; // Helper stack used during push operation
 
 public:
 
     // Function to insert an element into the queue
-    void push(int val) {
+    void push(T val) {
         // Step 1: Move all elements from s1 to s2
         while (!s1.empty()) {
             s2.push(s1.top());
@@ -56,39 +57,38 @@ public:
             s1.push(s2.top());
             s2.pop();
         }
-
-        // Now, the front of the queue is at the top of s1
     }
 
     // Function to remove the front element of the queue
     void pop() {
-        // Since front is on top of s1, just pop
         if (!s1.empty())
             s1.pop();
     }
 
     // Function to get the front element of the queue
-    int front() {
-        // Return the top element of s1 which is front of queue
-        if (!s1.empty()){
+    T front() {
+        if (!s1.empty()) {
             return s1.top();
         }
-        return -1; // Return -1 if queue is empty (edge case)
+        return T(); // Return default value of type T if queue is empty
+    }
+
+    // Function to check if the queue is empty
+    bool empty() {
+        return s1.empty();
     }
 };
 
 int main() {
-    Queue q;
+    Queue<int> q; // Queue of integers
 
-    // Insert elements
     q.push(1);
     q.push(2);
-    q.push(3); // Queue is now: 1 (front), 2, 3
+    q.push(3); // Queue: 1 (front), 2, 3
 
     q.pop();   // Removes 1
 
-    // Should print 2 (new front)
-    cout << "Front : " << q.front() << endl;
+    cout << "Front: " << q.front() << endl; // Should print 2
 
     return 0;
 }
