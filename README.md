@@ -139,3 +139,16 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
   - **Level Order Traversal**: Traversing trees level by level.
   - **Task Scheduling**: Managing processes in operating systems.
   - **Sliding Window Problems**: Solving problems using queue or deque for efficient window management.
+
+### **Greedy Algorithm**
+- **What is Greedy Algorithm?**:  
+  A problem-solving approach where decisions are made step-by-step to choose the best option at each stage with the hope that this leads to an optimal solution overall.
+- **Characteristics**:
+  - **Local Optimization**: Greedy algorithms make the best choice at each step.
+  - **No Backtracking**: Once a decision is made, it is never reconsidered.
+- **Common Problems**:
+  - **Activity Selection Problem**: Choosing the maximum number of activities that don’t overlap.
+  - **Fractional Knapsack Problem**: Taking items with the highest value-to-weight ratio first.
+  - **Huffman Encoding**: Building an optimal prefix code for data compression.
+  - **Job Sequencing with Deadlines**: Scheduling jobs to maximize profit within deadlines.
+- **Time Complexity**: Varies by implementation, generally **O(n log n)** when sorting is involved.
