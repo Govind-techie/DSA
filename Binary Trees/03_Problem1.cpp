@@ -37,7 +37,7 @@ public:
 };
 
 static int idx = -1;
-Node* buildTree(vector<int> nodes) {
+Node* buildTree(vector<int> nodes) { // Time => O(n) & Space => O(1)
     idx++;
 
     // Base case: if the current value is -1, return NULL
