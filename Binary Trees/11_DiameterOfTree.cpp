@@ -68,25 +68,26 @@ Node* buildTree(vector<int> nodes) {
 }
 
 /*
-Function to compute diameter of binary tree and update max diameter by reference
-Diameter is number of nodes on longest path between any two nodes in the tree
-Returns height of current subtree for parent computations
+Finds the diameter of the binary tree and updates it by reference.
+Diameter = number of nodes on the longest path between any two nodes.
+Returns the height of the current subtree to help parent calls.
 */
-int diameterTree(Node* root, int &diameter) {
-    if (root == NULL) return 0;  // Base case: empty tree has height 0
 
-    // Recursively get height of left subtree
+int diameterTree(Node* root, int &diameter) { // Time: O(n), Space: O(1) (excluding recursion stack)
+    if (root == NULL) return 0;  // If tree is empty, height is 0
+
+    // Get height of left subtree
     int leftHt = diameterTree(root->left, diameter);
-    // Recursively get height of right subtree
+    // Get height of right subtree
     int rightHt = diameterTree(root->right, diameter);
 
-    // Current diameter through this node is sum of left and right heights + 1 (current node)
+    // Diameter at current node = left height + right height + 1 (for current node)
     int currDiameter = leftHt + rightHt + 1;
 
-    // Update global max diameter if current is larger then previous diameter
+    // Update max diameter if current one is bigger
     diameter = max(diameter, currDiameter);
 
-    // Return height of subtree rooted at current node (max of left/right subtree + 1)
+    // Return height of current subtree
     return max(leftHt, rightHt) + 1;
 }
 
