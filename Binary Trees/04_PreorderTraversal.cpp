@@ -74,12 +74,12 @@ void preorder(Node* root) {
     // Base case: if node is NULL, just return
     if (root == NULL) return;
     
+    // Print current node's data
+    cout << root->data << " ";
     
     // Recursively print left subtree
     preorder(root->left);
 
-    // Print current node's data
-    cout << root->data << " ";
     
     // Recursively print right subtree
     preorder(root->right);

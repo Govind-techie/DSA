@@ -67,39 +67,38 @@ Node* buildTree(vector<int> nodes) {
     return currNode;
 }
 
-/*
-Finds the diameter of the binary tree and updates it by reference.
-Diameter = number of nodes on the longest path between any two nodes.
-Returns the height of the current subtree to help parent calls.
-*/
+// Function to return a pair containing:
+// first  -> diameter of the subtree
+// second -> height of the subtree
+pair<int,int> diameterTree(Node* root){
 
-int diameterTree(Node* root, int &diameter) { // Time: O(n), Space: O(1) (excluding recursion stack)
-    if (root == NULL) return 0;  // If tree is empty, height is 0
+    // Base case: if tree is empty, diameter and height are 0
+    if (root == NULL) return make_pair(0, 0);
 
-    // Get height of left subtree
-    int leftHt = diameterTree(root->left, diameter);
-    // Get height of right subtree
-    int rightHt = diameterTree(root->right, diameter);
+    // Recursively get diameter and height of left subtree
+    pair<int,int> leftInfo = diameterTree(root->left);
 
-    // Diameter at current node = left height + right height + 1 (for current node)
-    int currDiameter = leftHt + rightHt + 1;
+    // Recursively get diameter and height of right subtree
+    pair<int,int> rightInfo = diameterTree(root->right);
 
-    // Update max diameter if current one is bigger
-    diameter = max(diameter, currDiameter);
+    // Diameter through current node = height of left + height of right + 1 (count current node)
+    int currDiam = leftInfo.second + rightInfo.second + 1;
 
-    // Return height of current subtree
-    return max(leftHt, rightHt) + 1;
+    // Max diameter so far = max of current diameter, left subtree diameter, right subtree diameter
+    int finalDiam = max(currDiam, max(leftInfo.first, rightInfo.first));
+
+    // Height of current node = max of left and right heights + 1
+    int finalHt = max(leftInfo.second, rightInfo.second) + 1;
+
+    // Return pair of (max diameter, height)
+    return make_pair(finalDiam, finalHt);
 }
 
 int main() {
     vector<int> nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, -1};
     Node* root = buildTree(nodes);
 
-    int diameter = 0; 
-
-    diameterTree(root, diameter);
-
-    cout << "Diameter of tree = " << diameter << endl;
+    cout << "Diameter of tree = " << diameterTree(root).first << endl;
 
     return 0;
 }
