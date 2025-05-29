@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "__node_handle": "cpp"
     }
 }
