@@ -66,30 +66,35 @@ Node* buildBST(vector<int>nodes){
 }
 
 // Function to find the leftmost (smallest) node in a binary search tree (BST)
-// Typically used to find the inorder successor when a node has a right child
+// This is used to find the inorder successor when a node has a right child
 Node* inorderSuccessor(Node* root) {
     // Base case: if the subtree is empty or we've reached the leftmost node
     if (root == NULL || root->left == NULL) return root;
 
-    // Recursive case: keep moving to the left child
+    // Recursive case: keep moving to the left child to find the minimum node
     return inorderSuccessor(root->left);
 }
 
+// Function to perform inorder traversal of BST (prints nodes in sorted order)
 void inorderTraversal(Node* root){
-    if (root == NULL) return;
+    if (root == NULL) return; // Base case: empty subtree
 
-    inorderTraversal(root->left);
-    cout << root->data << " ";
-    inorderTraversal(root->right);
+    inorderTraversal(root->left);      // Visit left subtree
+    cout << root->data << " ";         // Print current node's data
+    inorderTraversal(root->right);     // Visit right subtree
 }
 
 int main(){
+    // Create a BST from the given list of values
     vector<int>nodes = {8,5,3,1,4,6,9,11,14};
     Node* root = buildBST(nodes);
 
+    // Print the inorder traversal (should be sorted)
     inorderTraversal(root);
     cout << endl;
 
+    // Find and print the inorder successor of the root's right child (node with value 9)
+    // This will print the smallest value greater than 9 in the BST
     cout << "Inorder successor : " << (inorderSuccessor(root->right))->data << endl;
     return 0;
 }

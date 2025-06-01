@@ -65,39 +65,49 @@ Node* buildBST(vector<int>nodes){
     return root;
 }
 
+// Function to find the inorder successor (leftmost node in right subtree)
 Node* inorderSuccessor(Node* root){
+    // If root is NULL or has no left child, it is the successor
     if (root == NULL || root->left == NULL) return root;
+    // Otherwise, keep going left to find the minimum node
     return inorderSuccessor(root->left);
 }
 
+// Function to delete a node with value 'val' from BST
 Node* deleteNodeBST(Node* root, int val){
-    if (root == NULL) return NULL;
+    if (root == NULL) return NULL; // Base case: node not found
 
-    // Find Node
-
+    // Traverse the tree to find the node to delete
     if (val < root->data){
-        root->left = deleteNodeBST(root->left,val);
-    }else if (val > root->data){
-        root->right = deleteNodeBST(root->right,val);
-    }else{
-        // For leaf nodes
+        root->left = deleteNodeBST(root->left, val); // Go left if val is smaller
+    } else if (val > root->data){
+        root->right = deleteNodeBST(root->right, val); // Go right if val is larger
+    } else {
+        // Node found
+
+        // Case 1: Node is a leaf (no children)
         if (root->left == NULL && root->right == NULL){
-            delete root;
-            return NULL;
+            delete root; // Free memory
+            return NULL; // Remove link from parent
         }
 
-        // for 1 child node
-        if(root->right == NULL || root->left == NULL){
+        // Case 2: Node has only one child
+        if (root->right == NULL || root->left == NULL){
+            // Return the non-NULL child to be linked with parent
+            // (No need to delete root here, but ideally should free memory)
             return root->left == NULL ? root->right : root->left;
         }
 
-        // for 2 children
+        // Case 3: Node has two children
+        // Find inorder successor (smallest in right subtree)
         Node* succ = inorderSuccessor(root->right);
+        // Copy successor's value to current node
         root->data = succ->data;
+        // Delete the inorder successor node recursively
         root->right = deleteNodeBST(root->right, succ->data);
     }
 
-    return root;
+    return root; // Return the (possibly updated) root pointer
 }
 
 void inorderTraversal(Node* root){
