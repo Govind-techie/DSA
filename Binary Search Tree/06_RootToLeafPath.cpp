@@ -71,24 +71,47 @@ Node* buildBST(vector<int>nodes){
     return root;
 }
 
-void rootToLeaf(Node* root,vector<int>&path){
-    if (root == NULL) return;
-
-    path.push_back(root->data);
-
-    if (root->left == NULL && root->right == NULL){
-        cout << root->data << endl;
-        path.pop_back();
+// Prints the current path from root to a leaf node
+void printPath(vector<int>path){
+    cout << "path : ";
+    for (int i = 0 ; i < path.size() ; i++){
+        cout << path[i] << " ";
     } 
-    
-    rootToLeaf(root->left,path);
-
+    cout << endl;
 }
 
+// Recursive helper to find all root-to-leaf paths
+void helper(Node* root, vector<int>& path){
+    if (root == NULL) return;  // Base case: reached beyond leaf
+
+    path.push_back(root->data);  // Add current node to path
+
+    // If leaf node, print the path
+    if (root->left == NULL && root->right == NULL){
+        printPath(path);
+        path.pop_back();  // Backtrack to explore other paths
+        return;
+    }
+
+    // Explore left subtree
+    helper(root->left, path);
+    // Explore right subtree
+    helper(root->right, path);
+
+    path.pop_back();  // Backtrack after exploring both subtrees
+}
+
+// Initiates path finding from root to all leaf nodes
+void rootToLeaf(Node* root){
+    vector<int> path;
+    helper(root, path);
+}
 
 int main(){
-    vector<int> nodes = {3, 5, 7, 10, 12, 15, 17};
+    // Create BST from given nodes
+    vector<int> nodes = {10, 5, 3, 7, 15, 12, 17};
     Node* root = buildBST(nodes);
-    vector<int>path;
-    rootToLeaf(root,path);
+
+    // Print all root-to-leaf paths in the BST
+    rootToLeaf(root);
 }
