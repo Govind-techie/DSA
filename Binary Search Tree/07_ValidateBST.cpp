@@ -35,31 +35,6 @@ public:
     }
 };
 
-Node* insertNode(Node* root, int val){
-    if (root == NULL){
-        root = new Node(val);
-        return root;
-    }
-
-    if (val < root->data){
-        root->left = insertNode(root->left,val);
-    }else{
-        root->right = insertNode(root->right,val);
-    }
-
-    return root;
-}
-
-Node* buildBST(vector<int>nodes){
-    Node* root = NULL;
-
-    for (int i = 0 ; i < nodes.size() ; i++){
-        root = insertNode(root,nodes[i]);
-    }
-
-    return root;
-}
-
 static int idx = -1;
 Node* buildTree(vector<int>nodes){
     idx++;
