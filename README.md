@@ -152,3 +152,20 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
   - **Huffman Encoding**: Building an optimal prefix code for data compression.
   - **Job Sequencing with Deadlines**: Scheduling jobs to maximize profit within deadlines.
 - **Time Complexity**: Varies by implementation, generally **O(n log n)** when sorting is involved.
+
+### **Binary Search Tree**
+- **Introduction**: A Binary Search Tree (BST) is a binary tree where each node has a value such that the left child is less than the node and the right child is greater.
+- **Properties**:
+  - Left subtree contains nodes with values less than the root.
+  - Right subtree contains nodes with values greater than the root.
+  - Inorder traversal of BST gives a sorted sequence.
+- **Operations**:
+  - **Insertion**: Recursively insert elements maintaining BST property.
+  - **Search**: Recursively or iteratively search for a value.
+  - **Deletion**: Handle three cases—node with no child, one child, or two children.
+  - **Traversal**: Inorder, Preorder, Postorder.
+  - **Minimum and Maximum**: Finding the min/max value in BST.
+- **Applications**:
+  - Efficient searching and insertion.
+  - Used in databases and range queries.
+  - Basis for self-balancing trees like AVL and Red-Black Trees.
