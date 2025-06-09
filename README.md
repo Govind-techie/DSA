@@ -169,3 +169,40 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
   - Efficient searching and insertion.
   - Used in databases and range queries.
   - Basis for self-balancing trees like AVL and Red-Black Trees.
+
+### **Heaps / Priority Queue**
+
+- **Introduction to Heaps**:  
+  A heap is a specialized tree-based data structure that satisfies the heap property:  
+  - **Max-Heap**: The key at the root must be maximum among all keys present in the heap.  
+  - **Min-Heap**: The key at the root must be minimum among all keys present in the heap.  
+  Heaps are commonly implemented as binary trees but are usually stored as arrays for efficient indexing.
+
+- **Heap Properties**:  
+  - Complete binary tree (all levels are fully filled except possibly the last, which is filled from left to right).  
+  - Parent node is either greater than (max-heap) or less than (min-heap) its children.
+
+- **Operations on Heaps**:
+  - **Insertion**: Add the new element at the end of the heap and heapify up to maintain the heap property.  
+  - **Deletion** (typically the root): Replace root with the last element, remove the last element, then heapify down.  
+  - **Peek**: Access the root element (max or min) in constant time **O(1)**.
+
+- **Time Complexity**:
+  - Insertion: **O(log n)**  
+  - Deletion (Extract Max/Min): **O(log n)**  
+  - Peek (Get Max/Min): **O(1)**
+
+- **Priority Queue**:  
+  A data structure built on top of heaps that allows elements to be processed based on priority rather than insertion order.  
+  - By default, C++ STL `priority_queue` is a max-heap.  
+  - Can be customized to behave as a min-heap by using a comparator.
+
+- **Common Use Cases**:
+  - **Dijkstra’s shortest path algorithm** (using min-priority queue).  
+  - **Huffman coding** (building the tree using min-heap).  
+  - **Order statistics**: finding kth largest/smallest element.  
+  - **Event-driven simulation**: managing events by priority.  
+  - Efficiently implementing sorting algorithms like **Heap Sort**.
+
+- **Heap Sort**:  
+  A comparison-based sorting technique based on a binary heap data structure. It involves building a max-heap and repeatedly extracting the maximum element to get a sorted array. Time complexity: **O(n log n)**.
