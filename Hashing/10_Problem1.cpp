@@ -24,22 +24,34 @@ Output: false
 #include<unordered_map>
 using namespace std;
 
-pair<int,int> pairSum(vector<int>arr,int target){
-    unordered_map<int,int> m;
-    for (int i = 0 ; i < arr.size() ; i++){
-        int comp = target - arr[i];
-        if (m.count(comp)){
-            return {m[comp],i};
+// Function to find the indices of two elements that sum up to the target
+pair<int,int> pairSum(vector<int> arr, int target) { // Time Complexity : O(n)
+    unordered_map<int, int> m;  // Map to store value -> index
+
+    // Traverse the array
+    for (int i = 0; i < arr.size(); i++) {
+        int comp = target - arr[i];  // Calculate the complement needed
+
+        // Check if the complement is already in the map
+        if (m.count(comp)) {
+            // If found, return the indices (index of complement, current index)
+            return {m[comp], i};
         }
+
+        // Store the current value with its index in the map
         m[arr[i]] = i;
     }
-    return {-1,-1}; // Doesn't found a pair
+
+    // If no such pair is found, return {-1, -1}
+    return {-1, -1};
 }
 
-int main(){
-    vector<int>arr = {1,2,7,10,11,15};
+int main() {
+    vector<int> arr = {1, 2, 7, 10, 11, 15};
     int target = 9;
-    pair<int,int> index = pairSum(arr,target);
+    pair<int, int> index = pairSum(arr, target);
+
     cout << "Index : " << index.first << "," << index.second << endl;
+
     return 0;
 }
