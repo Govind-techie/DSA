@@ -172,37 +172,41 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
 
 ### **Heaps / Priority Queue**
 
-- **Introduction to Heaps**:  
-  A heap is a specialized tree-based data structure that satisfies the heap property:  
-  - **Max-Heap**: The key at the root must be maximum among all keys present in the heap.  
-  - **Min-Heap**: The key at the root must be minimum among all keys present in the heap.  
-  Heaps are commonly implemented as binary trees but are usually stored as arrays for efficient indexing.
+- **Heap Basics**:  
+  A heap is a complete binary tree used to maintain a priority order.  
+  - **Max-Heap**: Root is the largest element.  
+  - **Min-Heap**: Root is the smallest element.  
+  Usually implemented using arrays.
 
-- **Heap Properties**:  
-  - Complete binary tree (all levels are fully filled except possibly the last, which is filled from left to right).  
-  - Parent node is either greater than (max-heap) or less than (min-heap) its children.
-
-- **Operations on Heaps**:
-  - **Insertion**: Add the new element at the end of the heap and heapify up to maintain the heap property.  
-  - **Deletion** (typically the root): Replace root with the last element, remove the last element, then heapify down.  
-  - **Peek**: Access the root element (max or min) in constant time **O(1)**.
-
-- **Time Complexity**:
-  - Insertion: **O(log n)**  
-  - Deletion (Extract Max/Min): **O(log n)**  
-  - Peek (Get Max/Min): **O(1)**
+- **Time Complexities**:  
+  - Insert: **O(log n)**  
+  - Delete (Extract Min/Max): **O(log n)**  
+  - Peek (Top Element): **O(1)**
 
 - **Priority Queue**:  
-  A data structure built on top of heaps that allows elements to be processed based on priority rather than insertion order.  
-  - By default, C++ STL `priority_queue` is a max-heap.  
-  - Can be customized to behave as a min-heap by using a comparator.
+  A data structure based on heaps that processes elements by priority.  
+  - C++ `priority_queue` is by default a **max-heap**.  
+  - Use custom comparator for **min-heap**.
 
-- **Common Use Cases**:
-  - **Dijkstra’s shortest path algorithm** (using min-priority queue).  
-  - **Huffman coding** (building the tree using min-heap).  
-  - **Order statistics**: finding kth largest/smallest element.  
-  - **Event-driven simulation**: managing events by priority.  
-  - Efficiently implementing sorting algorithms like **Heap Sort**.
+- **Use Cases**:  
+  - **Dijkstra’s Algorithm** (min-heap)  
+  - **Kth largest/smallest** elements  
+  - **Huffman Coding**, **Heap Sort**, etc.
 
-- **Heap Sort**:  
-  A comparison-based sorting technique based on a binary heap data structure. It involves building a max-heap and repeatedly extracting the maximum element to get a sorted array. Time complexity: **O(n log n)**.
+### **Hashing**
+
+- **Introduction**:  
+  Hashing is a technique used to map data to a fixed-size value (hash code) using a hash function. It's widely used for **fast lookups** and **duplicate detection**.
+
+- **Common STL Containers**:
+  - `unordered_map`: Stores key-value pairs with **average O(1)** access time.
+  - `unordered_set`: Stores unique keys with **average O(1)** lookup.
+
+- **Use Cases**:
+  - **Frequency Count**: Count occurrences of elements.
+  - **Detect Duplicates**: Check if duplicates exist in an array.
+  - **Two Sum Problem**: Efficient lookup of complement elements.
+  - **Longest Subarray with 0 Sum / K Sum**: Use prefix sum with hash maps.
+
+- **Time Complexity**:
+  - Insertion, Deletion, Search: **O(1)** on average (can degrade to O(n) in worst case).
