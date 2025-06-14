@@ -210,3 +210,18 @@ The **Standard Template Library (STL)** provides a collection of built-in **data
 
 - **Time Complexity**:
   - Insertion, Deletion, Search: **O(1)** on average (can degrade to O(n) in worst case).
+
+### **Trie**
+- **What is a Trie?**:  
+  A tree-like data structure used to store and search strings efficiently, especially useful for prefix-based queries.
+
+- **Key Operations**:  
+  - **Insert**: Add a word to the trie.
+  - **Search**: Check if a word exists in the trie.
+  - **Prefix Search**: Check if any word starts with a given prefix.
+
+- **Common Uses**:  
+  Autocomplete, spell checking, prefix matching, and dictionary implementations.
+
+- **Time Complexity**:  
+  **O(L)** per operation, where **L** is the length of the word.
