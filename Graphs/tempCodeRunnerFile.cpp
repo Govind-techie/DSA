@@ -1,0 +1,1 @@
+    cin >> src >> dest;                  // source and destination
