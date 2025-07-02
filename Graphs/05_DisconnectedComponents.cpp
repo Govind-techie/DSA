@@ -11,11 +11,6 @@ Key Points:
     2. To find all components, we can use BFS or DFS starting from every unvisited node.
     3. The number of times we start a new traversal equals the number of disconnected components.
 
-Applications:
-    - Network reliability analysis
-    - Social network clusters
-    - Identifying isolated groups in data
-
 Example:
     Graph:
         0 - 1     2 - 3

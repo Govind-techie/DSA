@@ -49,11 +49,11 @@ public:
         // Explore all unvisited neighbors of the current node
         for (int v : adjList[u]) {
             if (!visited[v]) {
-                visited[v] = true;        // Mark node as visited
-                path.push_back(v);        // Add node to current path
+                visited[v] = true; // Mark node as visited
+                path.push_back(v); // Add node to current path
                 dfs(v, dest, path, visited); // Recur for neighbor
-                path.pop_back();          // Backtrack
-                visited[v] = false;       // Unmark node
+                path.pop_back(); // Backtrack
+                visited[v] = false; // Unmark node
             }
         }
     }
@@ -61,10 +61,10 @@ public:
     // Function to start DFS from source to destination
     void allPaths(int src, int dest) {
         vector<bool> visited(V, false); // To keep track of visited nodes
-        vector<int> path;               // To store current path
-        path.push_back(src);            // Start path from source
-        visited[src] = true;            // Mark source as visited
-        dfs(src, dest, path, visited);  // Start DFS
+        vector<int> path; // To store current path
+        path.push_back(src); // Start path from source
+        visited[src] = true; // Mark source as visited
+        dfs(src, dest, path, visited);
     }
 };
 

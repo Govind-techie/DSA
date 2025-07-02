@@ -1,3 +1,21 @@
+/*
+Cycle Detection in a Directed Graph - (DFS)
+
+- A cycle exists in a directed graph if you can start at a node and return to it by following the direction of edges.
+- In DFS, a cycle is detected if you revisit a node that is already in the current recursion path (recursion stack).
+- Useful for detecting deadlocks, checking if a graph is a DAG, and validating dependency graphs.
+
+Key Points:
+    1. Use two arrays: one for visited nodes, one for the current recursion path.
+    2. If a neighbor is already in the current path, a cycle exists.
+
+Example:
+    0 → 1
+    ↑   ↓
+    4 ← 2 → 3
+    (Cycle: 2 → 4 → 2)
+*/
+
 #include<iostream>
 #include<vector>
 #include<list>
