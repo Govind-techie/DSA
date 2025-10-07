@@ -7,7 +7,6 @@ Each element can be accessed using two indices:
 
 Declaration Syntax:
 data_type array_name[rows][columns];
-
 */
 
 #include <iostream>

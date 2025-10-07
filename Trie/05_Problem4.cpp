@@ -14,7 +14,6 @@ Explanation: The unique substrings are: "a", "b", "ab", "ba", "aba", "bab", "aba
 #include <vector>
 using namespace std;
 
-
 class Node {
 public:
     unordered_map<char, Node*> child; // edges to next characters
